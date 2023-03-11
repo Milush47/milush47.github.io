@@ -1,0 +1,36 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  datasource:
+    password: 1234
+    url: jdbc:postgresql://localhost:5432/Recipes
+    username: postgres
+    driver-class-name: org.postgresql.Driver
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: fptp.corp@gmail.com
+    password: vduuelkvulvijbqj
+    properties:
+      mail.transport.protocol: smtp
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+jwt:
+  secret: 4A404E635266556A586E327235753878214125442A472D4B6150645367566B59
+  expirationMs: 86400000

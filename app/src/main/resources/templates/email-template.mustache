@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: rgb(242, 242, 242);
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #111;
+            font-family: Arial, sans-serif;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            line-height: 1;
+            text-align: left;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .button-49,
+        .button-49:after {
+            width: 150px;
+            height: 76px;
+            line-height: 78px;
+            font-size: 20px;
+            font-family: "Bebas Neue", sans-serif;
+            background: linear-gradient(45deg, transparent 5%, rgb(255, 1, 60));
+            border: 0;
+            color: #fff;
+            letter-spacing: 3px;
+            box-shadow: 6px 0 0 rgb(0, 230, 246);
+            outline: transparent;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-49:after {
+            --slice-0: inset(50% 50% 50% 50%);
+            --slice-1: inset(80% -6px 0 0);
+            --slice-2: inset(50% -6px 30% 0);
+            --slice-3: inset(10% -6px 85% 0);
+            --slice-4: inset(40% -6px 43% 0);
+            --slice-5: inset(80% -6px 5% 0);
+
+            content: "ALTERNATE TEXT";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                    45deg,
+                    transparent 3%,
+                    #00e6f6 3%,
+                    #00e6f6 5%,
+                    #ff013c 5%
+            );
+            text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+            clip-path: var(--slice-0);
+        }
+
+        .button-49:hover:after {
+            animation: 1s glitch;
+            animation-timing-function: steps(2, end);
+        }
+
+        @keyframes glitch {
+            0% {
+                clip-path: var(--slice-1);
+                transform: translate(-20px, -10px);
+            }
+            10% {
+                clip-path: var(--slice-3);
+                transform: translate(10px, 10px);
+            }
+            20% {
+                clip-path: var(--slice-1);
+                transform: translate(-10px, 10px);
+            }
+            30% {
+                clip-path: var(--slice-3);
+                transform: translate(0px, 5px);
+            }
+            40% {
+                clip-path: var(--slice-2);
+                transform: translate(-5px, 0px);
+            }
+            50% {
+                clip-path: var(--slice-3);
+                transform: translate(5px, 0px);
+            }
+            60% {
+                clip-path: var(--slice-4);
+                transform: translate(5px, 10px);
+            }
+            70% {
+                clip-path: var(--slice-2);
+                transform: translate(-10px, 10px);
+            }
+            80% {
+                clip-path: var(--slice-5);
+                transform: translate(20px, -10px);
+            }
+            90% {
+                clip-path: var(--slice-1);
+                transform: translate(-10px, 0px);
+            }
+            100% {
+                clip-path: var(--slice-1);
+                transform: translate(0);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .button-49,
+            .button-49:after {
+                width: 200px;
+                height: 86px;
+                line-height: 88px;
+            }
+        }
+   .btn.center-btn {
+  margin:auto;
+  display:table;
+  margin-top:25vh;
+}
+div {margin-top:80px;}
+
+.btn {
+    font-family: "CircularStd-Bold", sans-serif;
+    font-weight: normal;
+    background-color: transparent;
+    border: solid 4px #000000;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block; 
+    font-size: 16px;
+    padding: 12px 28px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-position: right 32px center;
+    background-repeat: no-repeat;
+    background-size: 31px 12px;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #000;
+    border-color: #000;
+    color: #ffffff;
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 0px rgba(3,4,3,.2);
+}
+
+.btn:active {
+  transform: translateY(0px);
+  box-shadow: 0px 0px 0px rgba(3,4,3,.15);
+}
+
+
+.btn:hover::after {
+    opacity: 1;
+}
+        
+    .rights {
+        text-align: center;
+        margin-top: 90px;
+        font-size: 12px;
+        color: #000;
+        opacity: 0.5;
+}     
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    display: table;
+    margin: 50px auto auto;
+}
+</style>
+</head>
+<body>
+<img src="cid:logo" alt="logo" class="logo">
+<h2 class="name">Hi, {{name}}!</h2>
+<div class="card">
+    <h1>{{subject}}</h1>
+<p>{{message}}</p>
+        <a href="{{buttonLink}}" class="center-btn btn btn-default">
+            Click
+        </a>
+</div>
+        <p class="rights">2023 &copy; All rights reserved<br>
+            You are receiving this email because you registered on our site.
+        </p>
+    </body>
+</html>
